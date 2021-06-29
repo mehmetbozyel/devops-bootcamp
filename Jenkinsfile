@@ -3,20 +3,35 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Build"
-                echo "Step2"
+                parallel(
+			    	a: {
+				        echo "This is branch a"
+				    },
+				    b: {
+				    	echo "This is branch b"
+				    }
             }
         }
         stage('test') {
             steps {
-                echo "Test"
-                echo "Step2"
+                parallel(
+			    	a: {
+				        echo "This is branch a"
+				    },
+				    b: {
+				    	echo "This is branch b"
+				    }
             }
         }
         stage('deploy') {
             steps {
-                echo "Deploy"
-                echo "Step2"
+                parallel(
+			    	a: {
+				        echo "This is branch a"
+				    },
+				    b: {
+				    	echo "This is branch b"
+				    }
             }
         }
     }
