@@ -10,6 +10,7 @@ pipeline {
 				    b: {
 				    	echo "This is branch b"
 				    }
+				)
             }
         }
         stage('test') {
@@ -21,6 +22,7 @@ pipeline {
 				    b: {
 				    	echo "This is branch b"
 				    }
+				)
             }
         }
         stage('deploy') {
@@ -32,6 +34,7 @@ pipeline {
 				    b: {
 				    	echo "This is branch b"
 				    }
+				)
             }
         }
     }
